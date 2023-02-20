@@ -1,0 +1,10 @@
+.employee-list {
+    margin-top: 5rem;
+    list-style: none;
+    @include flex(column, nowrap, flex-start, center);
+    gap: 3rem 2rem;
+    width: 100%;
+    @include break(large) {
+        @include flex(row, wrap, center, center);
+    }
+}
