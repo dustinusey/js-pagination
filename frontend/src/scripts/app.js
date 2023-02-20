@@ -13,7 +13,7 @@ hamMenu.addEventListener('click', e => {
 // variables
 const pagination = document.getElementById('pagination');
 const totalItems = data.length;
-const itemsPerPage = 12;
+const itemsPerPage = 9;
 let pageCount = Math.ceil(totalItems / itemsPerPage);
 let currentPage = 1;
 // functions
@@ -25,7 +25,7 @@ function handlePagination(pages) {
     }
 }
 // generate a list of users based on the current page
-function handleUsers(userData) {
+function handleUsers(userData, inputValue) {
     employeeList.innerHTML = '';
     const start = (currentPage - 1) * itemsPerPage;
     const end = start + itemsPerPage;
@@ -40,6 +40,9 @@ function handleUsers(userData) {
             </div>
         </li>`;
     });
+    if (users.length === 0) {
+        employeeList.innerHTML = `<li>There are no employees by the name <span class="no-employees">${inputValue}</span></li>`;
+    }
 }
 // handle changing the page when a new page is clicked
 function handlePageChange(e) {
@@ -79,6 +82,6 @@ userSearch.addEventListener('keyup', e => {
         return user.name.first.toLowerCase().includes(search) || user.name.last.toLowerCase().includes(search);
     });
     pageCount = Math.ceil(users.length / itemsPerPage);
-    handleUsers(users);
+    handleUsers(users, search);
     handlePagination(pageCount);
 });

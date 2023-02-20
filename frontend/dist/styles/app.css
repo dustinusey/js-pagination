@@ -474,6 +474,10 @@ main .pagination-container {
             align-items: center;
   }
 }
+.employee-list span.no-employees {
+  font-weight: 600;
+  font-size: 1.2rem;
+}
 
 .user-card {
   border-radius: 0.5rem;
