@@ -12,5 +12,18 @@ $breakpoints: (
   //   extra larges
   "xlarge": 1200px,
   "xxlarge": 1440px,
-  "widescreen": 1440px
+  "widescreen": 1440px,
+  // down right massive
+  "xxxlarge": 1600px
 ) !default;
+
+
+$accent: #4BB9DC;
+$white: #FFFFFF;
+$bg: #B5D8CD;
+$panel-dark: #1B2033;
+$panel-light: #F2F5FB;
+
+$link-bg: $panel-dark;
+$link-bg-hover: #f6f6f61e;
+$link-color: $panel-light;

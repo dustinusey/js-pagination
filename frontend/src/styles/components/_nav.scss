@@ -1,0 +1,86 @@
+nav {
+    @include bg($panel-dark);
+    position: absolute;
+    left: 0;
+    top: -100vh;
+    width: 100%;
+    height: auto;
+    overflow: auto;
+    padding: 1rem;
+    opacity: 0;
+    z-index: 10;
+    pointer-events: none;
+    border-bottom-left-radius: 1rem;
+    border-bottom-right-radius: 1rem;
+    transition: top .5s ease, opacity .5s ease;
+    &.show {
+        opacity: 1;
+        top: 100%;
+        pointer-events: auto;
+    }
+    p.nav-title {
+        color: lighten(rgba($accent, 0.5), 25%);
+        margin: 1.5rem auto 1rem;
+        font-size: 1.3rem;
+
+    }
+    ul {
+        &:first-of-type {
+            display: none;
+        }
+        li {
+            @include radius(.33rem);
+            @include flex(row, nowrap, flex-start, center);
+            padding: .75rem;
+            padding-left: 1rem;
+            list-style: none;
+            color: $link-color;
+            cursor: pointer;
+            transition: background-color .3s ease, padding .3s ease;
+            i {
+                margin-right: 1.5rem;
+                font-size: 1.1rem;
+                color: lighten(rgba($accent, 0.5), 25%);
+            }
+            &:hover {
+                @include bg($link-bg-hover);
+            }
+        }
+    }
+
+    @include break(medium) {
+        position: initial;
+        opacity: 1;
+        pointer-events: auto;
+        @include radius(0);
+        padding: 1rem 0rem;
+        margin-top: 1.5rem;
+
+        ul {
+        margin-right: .5rem;
+            &:first-of-type {
+                display: block;
+                & li {
+                    width: auto;
+                    text-align: left;
+                }
+            }
+            li {
+                padding: .75rem 0rem!important;
+                &.active {
+                    @include bg($accent);
+                    color: $panel-dark;
+                    pointer-events: none;
+                    padding: .75rem 1rem!important;
+                    font-weight: 400;
+                    i {
+                        color: $panel-dark;
+                    }
+                }
+                &:hover {
+                    padding: .75rem .5rem!important;
+                }
+            }
+        }
+    }
+}

@@ -5,14 +5,112 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <!-- favicon -->
-    <!-- <link rel="shortcut icon" href="./frontend/dist/images/favicon.png" type="image/x-icon"> -->
+    <link rel="shortcut icon" href="./assets/logo-small.png" type="image/x-icon">
     <!-- animation library -->
-    <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/> -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
     <!-- styles -->
     <link rel="stylesheet" href="./frontend/dist/styles/app.css" />
     <!-- fontawesome library -->
-    <!-- <script src="https://kit.fontawesome.com/6e358658ed.js" crossorigin="anonymous"></script> -->
-    <title>Document</title>
+    <script src="https://kit.fontawesome.com/6e358658ed.js" crossorigin="anonymous"></script>
+    <title>Coad Wizards | Employees</title>
   </head>
-  <body></body>
+  <body>
+    <div class="user-interface">
+      <header>
+        <img src="./assets/logo-small.png" alt="" class="logo mobile">
+        <img src="./assets/logo-full.png" alt="" class="logo desktop">
+        <div class="ham-menu" id="hamMenu">
+          <span class="top"></span>
+          <span class="mid"></span>
+          <span class="bottom"></span>
+        </div>
+        <nav id="nav">
+          <ul>
+            <li>
+              <i class="fa-solid fa-square-poll-horizontal"></i>
+              <p>Dashboard</p>
+            </li>
+            <li>
+              <i class="fa-solid fa-inbox"></i>
+              <p>Inbox</p>
+            </li>
+            <li>
+              <i class="fa-regular fa-calendar-check"></i>
+              <p>Calendar</p>
+            </li>
+          </ul>
+          <p class="nav-title">Recruitment</p>
+          <ul>
+            <li>
+              <i class="fa-solid fa-briefcase"></i>
+              <p>Jobs</p>
+            </li>
+            <li>
+              <i class="fa-solid fa-user-group"></i>
+              <p>Candidates</p>
+            </li>
+            <li>
+              <i class="fa-solid fa-file-pen"></i>
+              <p>My referrals</p>
+            </li>
+            <li>
+              <i class="fa-solid fa-tv"></i>
+              <p>Career Site</p>
+            </li>
+          </ul>
+          <p class="nav-title">Organization</p>
+          <ul>
+            <li class="active">
+              <i class="fa-solid fa-users"></i>
+              <p>Employees</p>
+            </li>
+            <li>
+              <i class="fa-solid fa-scale-unbalanced-flip"></i>
+              <p>Structure</p>
+            </li>
+            <li>
+              <i class="fa-solid fa-chart-pie"></i>
+              <p>Report</p>
+            </li>
+            <li>
+              <i class="fa-solid fa-gears"></i>
+              <p>Settings</p>
+            </li>
+          </ul>
+        </nav>
+      </header>
+      <main>
+        <div class="utility-header">
+          <div class="search-container" id="searchContainer">
+            <!-- dynamic -->
+          </div>
+          <div class="cta-group">
+            <div class="add-event round">
+              <i class="fa-solid fa-plus"></i>
+            </div>
+            <div class="notifications round">
+              <i class="fa-regular fa-bell"></i>
+            </div>
+            <div class="user-image round">
+              <img src="./assets/avatar.png">
+            </div>
+          </div>
+        </div>
+        <div class="main-content">
+          <p class="employee-count" id="employeeCount">
+            48 employees
+            <ul class="employee-list" id="employeeList">
+              <!-- dynamic -->
+            </ul>
+          </p>
+        </div>
+        <div class="pagination-container">
+          <ul id="pagination">
+            <!-- dynamic -->
+          </ul>
+        </div>
+      </main>
+    </div>
+    <script type="module" src="./frontend/dist/scripts/app.js"></script>
+  </body>
 </html>
