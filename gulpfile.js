@@ -23,7 +23,7 @@ const config = {
             return packages.gulp.src(config.path.styles.src)
                 .pipe(packages.scss())
                 .pipe(packages.autoPrefix('last 2 versions'))
-                .pipe(packages.min.css())
+                // .pipe(packages.min.css())
                 .pipe(packages.gulp.dest(config.path.styles.dest));
         },
         scripts: () => {
